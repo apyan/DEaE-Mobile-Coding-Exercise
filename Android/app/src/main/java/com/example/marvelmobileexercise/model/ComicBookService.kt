@@ -25,7 +25,7 @@ class ComicBookService {
     }
 
     interface ComicBookApi {
-        @GET("v1/public/comics/${Constant.CB_2000_ULTIMATE_SPIDER_MAN}")
+        @GET("v1/public/comics/${Constant.SELECTED_ID}")
         suspend fun loadComicBookInfo(
             @Query("apikey") apikey: String = Constant.API_PUBLIC_KEY,
             @Query("ts") ts: String = Constant.timeStamp,

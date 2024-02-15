@@ -12,11 +12,13 @@ object Constant {
     private const val API_PRIVATE_KEY = "2c4c6fcee94d89cf97298cad435e47e2dcc777b9"
 
     // Comic Book ID samples
-    const val CB_2004_SUB_MARINER = "1231"
-    const val CB_1941_CAPTAIN_AMERICA = "7852"
-    const val CB_1949_LOVE_ROMANCES = "9876"
-    const val CB_2004_X_MEN = "5632"
-    const val CB_2000_ULTIMATE_SPIDER_MAN = "4745"
+    private const val CB_2004_SUB_MARINER = "1231"
+    private const val CB_1941_CAPTAIN_AMERICA = "7852"
+    private const val CB_1949_LOVE_ROMANCES = "9876"
+    private const val CB_2004_X_MEN = "5632"
+    private const val CB_2000_ULTIMATE_SPIDER_MAN = "4745"
+
+    const val SELECTED_ID = CB_2000_ULTIMATE_SPIDER_MAN
 
     val timeStamp = Timestamp(System.currentTimeMillis()).time.toString()
 

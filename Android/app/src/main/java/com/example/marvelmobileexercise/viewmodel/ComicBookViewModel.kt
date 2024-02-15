@@ -27,7 +27,7 @@ class ComicBookViewModel(
             val comicBookResult = comicBookRepository.loadComicBookInfo().data.results
             comicBookState.value = comicBookResult
         } catch (error: Error) {
-            error.message?.let { Log.e("Error", it) }
+            error.message?.let { Log.e("Error Message: ", it) }
         }
     }
 }
