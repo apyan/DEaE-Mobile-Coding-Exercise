@@ -22,7 +22,11 @@ class ComicBookViewModel(
     }
 
     private suspend fun getComicBookInfo() {
-        val comicBookResult = comicBookRepository.loadComicBookInfo().data.results
-        comicBookList.value = comicBookResult
+        try {
+            val comicBookResult = comicBookRepository.loadComicBookInfo().data.results
+            comicBookList.value = comicBookResult
+        } catch (error: Error) {
+            comicBookList.value = emptyList()
+        }
     }
 }
