@@ -23,6 +23,8 @@ data class ComicBookInfoResult(
     val title: String,
     @SerializedName("issueNumber")
     val issueNumber: Int,
+    @SerializedName("description")
+    val description: String,
     @SerializedName("textObjects")
     val textObjects: List<ComicBookText>,
     @SerializedName("prices")

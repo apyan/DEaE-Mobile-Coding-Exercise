@@ -17,8 +17,9 @@ object Constant {
     private const val CB_1949_LOVE_ROMANCES = "9876"
     private const val CB_2004_X_MEN = "5632"
     private const val CB_2000_ULTIMATE_SPIDER_MAN = "4745"
+    private const val CB_1963_THE_AMAZING_SPIDER_MAN = "6669"
 
-    const val SELECTED_ID = CB_2000_ULTIMATE_SPIDER_MAN
+    const val SELECTED_ID = CB_1963_THE_AMAZING_SPIDER_MAN
 
     val timeStamp = Timestamp(System.currentTimeMillis()).time.toString()
 
