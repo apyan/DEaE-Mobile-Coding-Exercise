@@ -11,6 +11,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.lifecycle.viewmodel.compose.viewModel
+import com.example.marvelmobileexercise.ui.screen.ComicBookInfoScreen
 import com.example.marvelmobileexercise.ui.theme.MarvelMobileExerciseTheme
 import com.example.marvelmobileexercise.viewmodel.ComicBookViewModel
 
@@ -19,7 +20,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             MarvelMobileExerciseTheme {
-                Greeting()
+                ComicBookInfoScreen()
             }
         }
     }
@@ -28,7 +29,7 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun Greeting() {
     val viewModel: ComicBookViewModel = viewModel()
-    val test = viewModel.comicBookState.value
+    val test = viewModel.comicBookList.value
     Text(
         text = test.toString()
     )

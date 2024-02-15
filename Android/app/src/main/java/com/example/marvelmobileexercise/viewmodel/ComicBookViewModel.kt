@@ -14,7 +14,7 @@ class ComicBookViewModel(
     private val comicBookRepository: ComicBookRepository = ComicBookRepository()
 ) : ViewModel() {
 
-    val comicBookState: MutableState<List<ComicBookInfoResult>> = mutableStateOf(emptyList())
+    val comicBookList: MutableState<List<ComicBookInfoResult>> = mutableStateOf(emptyList())
 
     init {
         viewModelScope.launch(Dispatchers.IO) {
@@ -23,11 +23,7 @@ class ComicBookViewModel(
     }
 
     private suspend fun getComicBookInfo() {
-        try {
-            val comicBookResult = comicBookRepository.loadComicBookInfo().data.results
-            comicBookState.value = comicBookResult
-        } catch (error: Error) {
-            error.message?.let { Log.e("Error Message: ", it) }
-        }
+        val comicBookResult = comicBookRepository.loadComicBookInfo().data.results
+        comicBookList.value = comicBookResult
     }
 }
