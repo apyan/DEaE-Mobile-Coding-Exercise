@@ -13,6 +13,9 @@ Disney and ESPN mobile coding exercise
 **ViewModel Compose (AndroidX Lifecycle)**
 - Decided to use the compose version for ViewModel to make it easier to interact with the composable views.
 
+**Truth (Google Testing)**
+- Prefer to use Truth since the assertion for unit testing is more concise and easy to understand.
+
 ### Retrospect
 - Would have added Dagger-Hilt for dependency injection, but due to the application scale size, it's not necessary.
 
