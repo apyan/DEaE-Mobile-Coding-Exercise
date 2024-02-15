@@ -1,5 +1,6 @@
 package com.example.marvelmobileexercise.viewmodel
 
+import android.util.Log
 import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
@@ -17,12 +18,16 @@ class ComicBookViewModel(
 
     init {
         viewModelScope.launch(Dispatchers.IO) {
-            val comicBookResult = getComicBookInfo()
-            comicBookState.value = comicBookResult
+            getComicBookInfo()
         }
     }
 
-    private suspend fun getComicBookInfo(): List<ComicBookInfoResult> {
-        return comicBookRepository.loadComicBookInfo().data.results
+    private suspend fun getComicBookInfo() {
+        try {
+            val comicBookResult = comicBookRepository.loadComicBookInfo().data.results
+            comicBookState.value = comicBookResult
+        } catch (error: Error) {
+            error.message?.let { Log.e("Error", it) }
+        }
     }
 }

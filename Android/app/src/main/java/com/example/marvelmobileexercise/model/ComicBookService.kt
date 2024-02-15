@@ -1,7 +1,6 @@
 package com.example.marvelmobileexercise.model
 
-import com.example.marvelmobileexercise.constant.Constant
-import com.example.marvelmobileexercise.constant.Constant.Companion.BASE_URL
+import com.example.marvelmobileexercise.core.Constant
 import com.example.marvelmobileexercise.model.response.ComicBookInfoResponse
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
@@ -14,7 +13,7 @@ class ComicBookService {
 
     init {
         val retrofit = Retrofit.Builder()
-            .baseUrl(BASE_URL)
+            .baseUrl(Constant.BASE_URL)
             .addConverterFactory(GsonConverterFactory.create())
             .build()
 
