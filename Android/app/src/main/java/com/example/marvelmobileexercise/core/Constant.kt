@@ -9,7 +9,7 @@ object Constant {
     const val BASE_URL = "https://gateway.marvel.com/"
 
     const val API_PUBLIC_KEY = "b9b09f15d2a0838f2365dae80639c4e1"
-    private const val API_PRIVATE_KEY = "2c4c6fcee94d89cf97298cad435e47e2dcc777b9"
+    const val API_PRIVATE_KEY = "2c4c6fcee94d89cf97298cad435e47e2dcc777b9"
 
     // Comic Book ID samples
     private const val CB_2004_SUB_MARINER = "1231"
